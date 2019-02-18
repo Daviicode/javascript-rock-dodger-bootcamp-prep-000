@@ -155,20 +155,19 @@ function endGame() {
   }
 
 function moveDodgerLeft() {
-    const left = positionToInteger(dodger.style.left);
-   if (left > 0){
-     dodger.style.left = `${left - 2}px`;
-     window.requestAnimationFrame(moveDodgerLeft);
-   }
+  const left = positionToInteger(dodger.style.left);
+  if (left > 0) {
+    dodger.style.left = `${left - 2}px`
+    window.requestAnimationFrame(moveDodgerLeft);
+  }
 }
 
 function moveDodgerRight() {
- 
-   const left = positionToInteger(dodger.style.left);
-   if (left < GAME_WIDTH - 40){
-     dodger.left.style = `${left + 2}px`;
-     window.requestAnimationFrame(moveDodgerRight);
-   }
+  const left = positionToInteger(dodger.style.left);
+  if (left < GAME_WIDTH - 40){
+    dodger.style.left = `${left + 2}px`;
+    window.requestAnimationFrame(moveDodgerRight);
+  }
 }
 
 /**
